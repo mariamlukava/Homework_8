@@ -31,13 +31,15 @@ article {
     transition-property: box-shadow, border-radius;
     transition-duration: 1s;
 }
-.dog_img { 
+
+.dog_img {
     margin: auto;
     width: 300px;
     height: 300px;
     transition-property: border-radius;
     transition-duration: 1s;
 }
+
 h3 {
     color: seagreen;
     margin: auto;
@@ -47,6 +49,7 @@ article:hover {
     box-shadow: 0 0 20px seagreen;
     border-radius: 20px;
 }
+
 article:hover .dog_img {
     border-radius: 20px 20px 0 0;
 }
@@ -63,11 +66,73 @@ p {
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
+
 @keyframes text_flash {
-    0%{
+    0% {
         opacity: 1;
     }
-    100%{
+
+    100% {
         opacity: 0;
     }
 }
+
+/* task4 */
+section {
+    position: relative;
+}
+
+.spinner {
+    width: 300px;
+    height: 300px;
+    margin: 100px auto;
+    border-radius: 50%;
+    border: 40px solid green;
+    border-top: 40px solid yellow;
+    border-right: 40px solid red;
+    animation-name: spinner;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+h4 {
+    color: green;
+    font-size: 70px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+@keyframes spinner{
+    0% { transform: rotate(0deg);
+    }
+    100% { transform: rotate(360deg);
+    }
+}
+.spinner:hover {
+    animation-play-state: paused;
+}
+/* task5 */
+header {
+    background-color: darkcyan;
+    padding: 20px 200px;
+    justify-content: space-between;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+a {
+    font-size: 70px;
+    color: white;
+    text-shadow: 1px 1px 3px black;
+    transition-property: text-shadow;
+    transition-duration: 1s;
+}
+
+a:hover {
+text-shadow: 0 0 20px fuchsia;
+}
+/* task6 */
